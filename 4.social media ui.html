@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sm.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <style>
+        body{
+            overflow: hidden;/**/
+        }
+        .snippets{
+            padding: 10px;
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            overflow-x: scroll;
+        }
+        .snippets::-webkit-scrollbar{display: none;}
+        .snip,.snippets div{
+            height:160px;}
+            @media only screen and (max-width:450px) {
+                .snippets{
+                    height: 100px;
+               }
+                .snip{
+                    height: 90px;
+                }
+                .sec1{
+                    padding: 0;
+                }
+                
+            }
+            
+        .snip{
+            margin-right: 5px;
+            border-radius: 15px;
+            object-fit: cover;
+            aspect-ratio: 3/4;
+            transition: all 0.5s ease-in;
+        }
+        .snippr{
+            position: relative;
+            bottom:60px;
+            height: 30px;
+            border: 2px solid violet;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background-color: rgb(35, 13, 130);
+        }
+        .snip:hover{
+            box-shadow: 4px 4px 9px 1px #590560;
+            transition: all 0.5s ease-in;
+        }
+        .content{
+            margin: 6px 0 0;
+            background-color: #ddd;
+            width: 100%;
+        }
+        .text{
+            margin: 6px 0 0;
+            width: 100%;
+            height: 35px;
+        }
+        .text input{
+            width: 90%;height: 100%;
+            border: 0;
+        }
+        input:focus{outline: 0;}
+        .darkmode-on{
+            background-color: #000;
+            color:#eee;
+        }
+        .darkmode-element-on{
+            background-color: rgb(17, 5, 36);
+            color: #eee;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container responsive ">
+        <nav class="darkmode-element"><i class="fa-brands fa-tumblr fa-xl"></i> 
+            <i id="darkmo" style="margin-left:20px ;" class="fa-solid fa-circle-half-stroke fa-xl"></i>
+            <div class="search"><i class="fa-solid fa-search "></i>
+                <input type="search" name="" id="search-post" placeholder="search"></div>
+            <button class="cre-btn">Create</button>
+            <img src="img/girl.jfif" alt=""></nav>
+            
+        <section class="sec sec1 darkmode ">
+            <sub class="sub sub1 darkmode-element">
+                <img src="img/girl.jfif" alt="">
+                <span><h3>riyazudeen mohamed</h3><p>bio</p></span>
+            </sub>
+            <sub class="sub sub2 darkmode-element"><i class="fa-solid fa-house fa-xl"></i><span><h3>Home</h3></span></sub>
+            <sub class="sub sub3 darkmode-element"><i class="fa-solid fa-compass fa-xl"></i><span><h3>Explore</h3></span></sub>
+            <sub class="sub sub4 darkmode-element"><i class="fa-solid fa-bell fa-xl"></i><span><h3>Notifiacation</h3></span></sub>
+            <sub id="message-btn"class="sub sub5 darkmode-element" onclick="re()" target="_blank"><i class="fa-solid fa-envelope fa-xl"></i><span><h3>Message</h3></span></sub>
+            <sub class="sub sub6 darkmode-element"><i class="fa-solid fa-bookmark fa-xl"></i><span><h3>Bookmark</h3></span></sub>
+            <sub class="sub sub7 darkmode-element"><i class="fa-solid fa-gear fa-xl"></i><span><h3>Setting</h3></span></sub>
+            <sub class="sub sub8 darkmode-element"><i class="fa-solid fa-palette fa-xl"></i><span><h3>Theme</h3></span></sub>
+            <button class="sub-btn"><span>Create Post</span> </button>
+        </section>
+        <section class="sec sec2 darkmode">
+         <div class="snippets darkmode" >
+            <div><img src="img/elephant.jfif" class="snip"style=""><img src="img/a1.jfif" class="snippr"></div>
+            <div><img src="img/a1.jfif" class="snip"style=""><img src="img/girl.jfif" class="snippr"></div>
+            <div><img src="img/a2.jpg" class="snip"style=""><img src="img/minecraft star.jfif" class="snippr"></div>
+            <div><img src="img/girl.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/minecraft1.jfif" class="snip"style=""><img src="img/minecraft star.jfif" class="snippr"></div> 
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div>
+            <div><img src="img/riyaz.jpg.jfif" class="snip"style=""><img src="img/riyaz.jpg.jfif" class="snippr"></div> 
+            <!-- <img src="" alt=""><img src="" alt=""> --></div>   
+            
+        <!-- <div class="text"><i class="fa-solid fa-search fa-xl"></i><input type="text"></div> -->
+        <div class="content darkmode">
+            <div class="post p-1 darkmode-element">
+                <main class="post-head  darkmode">
+                    <img src="img/a1.jfif" alt=""><span><h3>Arun Kumar</h3><p>posted</p></span>
+                </main>
+                <div class="posted-pic"><img src="img/elephant.jfif" alt=""></div>
+                <div class="post-icons"><i id="like"class="fa-regular fa-heart fa-fade fa-xl"></i>
+                    <i class="fa-solid fa-comment fa-xl"></i>
+                    <i class="fa-solid fa-share fa-xl"></i></div>
+                    <div class="text-under">
+                    </div>
+            </div>
+            <div class="post p-2 darkmode-element">
+                <main class="post-head darkmode">
+                    <img src="img/a1.jfif" alt=""><span><h3>Arun Kumar</h3><p>posted</p></span>
+                </main>
+                <div class="posted-pic"><img src="img/elephant.jfif" alt=""></div>
+                <div class="post-icons"><i id="like"class="fa-regular fa-heart fa-fade fa-xl"></i>
+                    <i class="fa-solid fa-comment fa-xl"></i>
+                    <i class="fa-solid fa-share fa-xl"></i></div>
+                    <div class="text-under">
+                        liked by nameand likes of 2000
+                    </div>
+            </div>
+        </div>
+        </section>
+        <section class="sec sec3 darkmode" >
+            <div class="request">
+                <div class="head-request"><h4>Friend Request</h4><i class="fa-regualr fa-pencil fa-xl"></i></div>
+                    <div class="requestp r1 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span>
+                    <div class="ac-dc"><button class="accept">accept</button><button class="decline">decline</button></div></div>
+                    <div class="requestp r2 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span>
+                        <div class="ac-dc"><button class="accept">accept</button><button class="decline">decline</button></div></div>
+                    <div class="requestp r3 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span>
+                        <div class="ac-dc"><button class="accept">accept</button><button class="decline">decline</button></div></div>
+                </div>
+            <div class="message darkmode" id="message">
+                <div class="head-message"><h4>Message</h4><i class="fa-regualr fa-pencil fa-xl"></i>
+                </div>
+                <div class="search-message"><i class="fa-regualr fa-pencil fa-xl"></i><input type="text" placeholder="search message"></div>
+                <div class="muser message-1 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>arun</h4><p>message</p></span></div>
+                <div class="muser message-2 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>hemanth</h4><p>message</p></span></div>
+                <div class="muser message-3 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>arshath</h4><p>message</p></span></div>
+                <div class="muser message-4 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>sudharson</h4><p>message</p></span></div>
+                <div class="muser message-5 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>arun</h4><p>message</p></span></div>
+                </div>
+                </div>
+        </section>
+    </div>
+    <script>
+        function re(){
+            window.location.href="message2.html";
+        }
+        
+        let a=0;
+        let h=document.getElementById("like");
+        h.addEventListener("click",()=>{
+            if(a==0){
+            h.className="fa-solid fa-heart  fa-xl";
+            a++;}
+            else if(a==1){
+                h.className="fa-regular fa-heart fa-bounce fa-xl"
+                a--;}
+            else{ a++}
+        })
+        let messageBtn=document.getElementById("message-btn")
+        messageBtn.addEventListener("click",()=>{
+           var k1= setInterval(k=()=>{
+                let g1=document.getElementById("message")
+                g1.style.scale="1.1";   
+                clearInterval(k1)
+            },null);
+
+            });
+            let darkmode=document.getElementById("darkmo")
+            let q=0;
+            darkmode.addEventListener("click",()=>{
+
+                if(q==0)
+                {let d1=document.getElementsByClassName("darkmode")
+                for(let o1 of d1){
+                    o1.classList.add("darkmode-on")}
+                let d2=document.getElementsByClassName("darkmode-element")
+                for(let o2 of d2){
+                    o2.classList.add("darkmode-element-on");q++}
+                console.log(q);}
+                else if(q==1)
+                {let d1=document.getElementsByClassName("darkmode")
+                for(let o1 of d1){
+                    o1.classList.remove("darkmode-on")}
+                let d2=document.getElementsByClassName("darkmode-element")
+                for(let o2 of d2){
+                    o2.classList.remove("darkmode-element-on")};q--
+                console.log(q);}
+                /*for(let o4 of d2){
+                     o4.classList.add("darkmode-element-on")}
+                for(let o6 of d2){
+                    o6.classList.add("darkmode-element-on")}
+                for(let o8 of d2){
+                    o8.classList.add("darkmode-element-on")}
+                for(let o10 of d2){
+                    o10.classList.add("darkmode-element-on")}*/
+                            
+            })
+    </script>
+</body>
+</html>

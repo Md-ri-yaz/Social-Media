@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        }
+        .con{
+            position: relative;
+            
+            background-color: rgb(3, 160, 160);
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content:center
+        }
+        .m1{
+            margin: 0 18px 0 0;
+        }
+       .m1::-webkit-scrollbar,.m2::-webkit-scrollbar{
+            display: none;
+        }
+        .m1,.m2{
+            background-color: #fff;
+            background-color: #faafff;
+            position: relative;
+            width: 40%;height: 100vh;
+            display: flex;align-items: end;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+        section{
+            position:absolute;height: 35px;
+            width: 100%;bottom: 0px;z-index: 2;
+            background-color: #aaf;
+            border-radius: 8px 8px 0 0 ;
+            
+        }
+        .inp,button{
+            height: 25px;width: 88%;
+            border: 1px solid transparent;
+            outline: 0;
+        }
+        .inp{border-radius: 8px;}
+        button{width: 12%;height: 4ch;border-radius: 50%; background:  #55f;}
+        .inp:focus,.inp:hover{
+            outline: 0;
+            border-color: transparent;
+        }
+        sub{
+            position: absolute;bottom: 50px;
+            width: 45%;height: 45px;
+            background-color: #999;
+        }
+        .send{
+            right: 0;
+            background-color: #afa;
+        }
+
+    </style>
+</head><body>
+    <div class="con">
+        <div class="m1">
+            <sub class="receive">jij</sub><sub class="send"></sub>
+            <section><input type="text" id="in1" class="inp"><button><i class="fa-regular fa-circle-up fa-xl" style="color: #000000;"></i></button></div></section>
+        <div class="m2">
+            <section><input type="text" id="in2" class="inp"><button>send</button></div></section>
+    </div>
+</body>
+
+</html>

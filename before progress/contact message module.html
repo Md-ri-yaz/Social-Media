@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="sm.css"> -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/bootstrap.js"></script> -->
+    <style>
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        .con{
+            display: flex;
+            flex-direction: row;
+        }
+        nav,.contacts,.message{
+            width: 50px;height: 50px;
+        }
+        main{
+            background-color: #ff0;
+            height: 100vh;
+            width: 25vw;
+        }
+        .contacts{
+            background-color: #0ff;
+        }
+        .message{
+            position: relative;
+            background-color: #fff;
+            height: 100vh;
+            width: 75vw;
+        }
+        nav{
+            background-color: #aaa;
+            width: auto;
+            height: 10vh;
+        }
+        .contacts{
+            background-color: #eee;
+            width: auto;height: 90vh;
+        }
+        .contact,header{
+            height: auto;width: auto;
+            border-bottom:1px solid black ;
+            padding: 7px 0 0 10px;
+            display: flex;
+            align-items: center;   
+        }
+        :is(.contact,.message header) img{
+            height: 40px;border-radius: 50%;display: inline;
+            margin-right: 10px;aspect-ratio: 1/1;
+        }
+        :is(.contact,.message header) span h4{margin-bottom:5px; font-weight: 900;}
+        .contact span p{font-weight: 100;color: #000000b6;}
+        header :is(span h4,span p,i){
+            color: #fff;
+        }
+        header{background-color: rgb(39, 2, 85);}
+        header i{margin: 0 10px 0 auto;}
+        footer{background-color: #aaa ;}
+        .message footer{
+            position: absolute;
+            bottom: 0;
+            height:50px;width: 70vw;
+            display: flex;align-items: center;justify-content: center;
+        }
+        .message footer :is(input:focus,input){outline: 0;border: none;}
+        .message footer input{
+            height: 30px;width: 60%;
+            background-color: #777;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .text{
+            position: absolute;
+            right: 10px;
+            bottom: 70px;
+            transition: all 0.3s linear;
+            background-color: #aaa;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 50%;
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="con">
+        <main><nav>nav</nav><div class="contacts">
+            <div class="contact c1"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c2"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c3"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c4"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c5"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c6"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c7"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c8"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c9"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+            <div class="contact c10"><img src="img/girl.jfif" alt=""><span><h4>name of person</h4><p>paragraph</p></span></div>
+        </div></main>
+        
+        <div class="message">
+            <header><img src="img/girl.jfif" alt="">
+                <span><h4>name of person</h4><p>paragraph</p></span>
+                <i class="fa-solid fa-house fa-xl"></i></header>
+                <div id="text-parent">
+                    <div class="text" id="text">jjjjjj</div>
+                </div>
+                <footer><input type="text" id="mese"><i onclick="tx()" class="fa-solid fa-play fa-xl"></i></footer>
+        </div>    
+    </div>
+    <script>
+        let tag=document.getElementById("text-parent");
+        let i=0;
+        const tx=()=>{
+            let mese=document.getElementById("mese").value
+            i++;
+            console.log(mese)
+            console.log(i)
+            let dtag="dtag"+i;
+        dtag=document.createElement("div")
+        tag.appendChild(dtag)
+        dtag.setAttribute("class","text")
+        dtag.innerHTML=mese;
+        mese=null;
+    }
+    </script>
+</body>
+</html>

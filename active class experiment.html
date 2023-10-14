@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: aqua;
+            color:black;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        .box:active{border-bottom:1px solid red;}
+        .active,.box:hover{
+            background-color: #199;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box1</div>
+    <div class="box ">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    
+    <script>
+        let box=document.getElementsByClassName("box")
+        console.log(box)
+        let a="";
+        for(let i of box){
+            //a+=i;
+            let a=0;
+            i.addEventListener("click",()=>{
+                a++;
+                let exi=document.getElementsByClassName("active")
+            //   (exi==undefined)?i.classList.add("active"):
+              // exi[0].classList.replace("box active","box")
+              if(exi.length>0){exi[0].className=exi[0].className.replace("active","")}
+              i.className+=" active";
+               
+            })
+        }
+    </script>
+</body>
+</html>

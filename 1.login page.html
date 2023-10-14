@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         #navbar{
+            background: #000000a5;
+            height: 80px;
+            /* position: absolute; */
+            top:0;
+            left:0;
+            width: 100%; 
+        }
+        #aa{
+            float: right;
+            font-size: large;
+            font-weight: bolder;
+            border-radius: 5px;
+            margin: 10px;
+            background: transparent;
+            border: none; 
+            color:#fff;
+            cursor: pointer;
+            padding: 6px;
+            transition: all 0.1s ease-in;
+            height: 52px;
+        }
+        #aa:hover{
+            /* background-color: #f47923; */
+            background-color: #00cf35;
+            transition: all 0.4s ease-in;
+            box-shadow: 4px 4px 0px 0px  black;
+        }
+        #aa:active{
+            color: red;
+            transition: color 0s;
+        }
+        #logo {
+            color: #00fd2e;
+            font-weight: bolder;
+            position: absolute;
+            top: 15px;
+            font-size: xx-large;
+
+        }
+        #form{
+            /* background-color: #0f0;
+            height: 500px;
+            width: 500px; */
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            height: 460px;
+            width: 425px;
+            /* background-image:linear-gradient(-135deg,#2d08e8 0% ,#b806c5 100%); */
+            background-color: #ffffff11;
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px 2px black;
+            opacity: 1;
+            transition: all 0.5s ease-in;   
+        }
+        .inp{    
+            top: 5px;
+            padding: 10px;
+        }
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            /* border: 1px solid white; */
+        }
+        #i3,#i4,#i6,#opp{
+            /* height: 15px; */
+            width: 386px;
+        }
+    input,select{
+        border-radius: 5px;
+        height: 35px;
+        padding: 5px;
+    }
+    .text{
+        padding-left: 10px;
+    }
+    #xx{
+        position: relative;
+        float: right;
+        padding: 10px 10px;
+        cursor: pointer;
+        /* box-shadow: 1px 1px 2px 2px #000; */
+    }
+    #parent{
+        background-color: transparent;
+        background-image:linear-gradient(135deg,#2d08e8 0% ,#b806c5 100%);
+        /* background-repeat: repeat; */
+        height: 100vh;
+    }
+    @media only screen and (max-width:1000px) {
+        #parent{
+            height:900px
+        }
+        
+    }
+    .ah{
+        display: flex;flex-wrap: wrap;justify-content: center; 
+        flex-direction: row;
+    }
+    .div{
+        padding: 10px;
+    }
+    .div {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .a1 input,.a2 input,.a3 input{
+        width: 100%;
+    }
+    .a1 input,.a2 input{
+        border-color: aqua;
+        border-color: -internal-light-dark(rgb(97, 0, 97), rgb(91, 0,91));
+    }
+    .div input{
+        padding: 10px;
+        background: #000;
+        color: #fff;
+    }
+    .text0{
+        padding-top: 90px;padding-left: 10px;
+          font-size: 60px;color: #00fd2e;
+    }
+    .text1{
+        font-size: 30px;padding-left: 10px;font-style: oblique;
+    }
+    .a5 button{
+        width: 65%;
+        height: 35px;
+        padding: 10px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 8px;
+    }
+    </style>
+</head>
+<body>
+    <body>
+
+        <div id="parent">
+        <nav id="navbar">
+            <span id="logo">Connect</span>
+            <button id="aa" type="button" onclick="dyn()" >Create Account</button>
+            <button id="aa" type="button">About</button>
+            <button id="aa" type="button">Collaborate </button>            
+            <button id="aa" type="button" onclick="aa()">Home</button>
+            
+        </nav>
+        <!-- <div class="parent ah" style="
+        display: flex;flex-wrap: wrap;justify-content: center;">
+        <div id="h1" style="display:inline-block;padding-right: 50px;">
+          <h1 style="padding-top: 90px;padding-left: 10px;
+          font-size: 60px;color: #00fd2e;">Connect</h1>
+            <p style="font-size: 30px;padding-left: 10px;font-style: oblique;">
+                it helps you to connect with people and <br>
+            share with people.create account for<br> explore <span style="color: #00fd2e;">Connect</span></p>  
+        </div>
+            <div class="home a1">
+                <div class="login" style="background-color: #06060698;
+                color: #00fd2e;margin-top:55px;margin-right: 130px;width: 100%;padding: 10px;
+                box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1);
+                border-radius: 8px;">
+                    <form style="display: flex;flex-flow: column;">
+                        
+                        <div class="div a1"><input placeholder="User Name" type="text"name="ne"></div>
+                        <div class="div a2"><input  placeholder="Password"type="text"></div>
+                        <div class="div a3"><input type="button" value="Log In"></div>
+                         <div class="div a4" style="border-bottom: 1px solid #555;">
+                            <a href="#" style="text-decoration: none; color: red;">Forget Password?</a></div>
+                            <div class="div a5"> <button onclick="dyn()"> New Account</button></div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    </div> 
+    
+    <div id="fpar" style="color: #b806c5;">
+        <div id="form">
+            
+        </div>
+    </div>
+    
+
+        <!-- <img src="msd.jpg"> -->
+    
+    <script>
+        
+        let i=0;
+        function dyn(){
+            
+            if(i==0){
+        let q=document.getElementById("form")
+        //container create and append
+        let dcontainer=document.createElement("div");
+        dcontainer.setAttribute("id","container");
+        q.appendChild(dcontainer);
+        //========================
+        //form tag create and append
+        let fm=document.createElement("form");
+        dcontainer.appendChild(fm);
+        //========================
+        // form upper part create and append
+        let d0=document.createElement("div")
+        let xx=document.createElement("span")
+        let h1=document.createElement("h1")
+        let p=document.createElement("p")//attribute 
+        d0.setAttribute("id","d0")//id
+        d0.setAttribute("class","c1")//c1
+        d0.setAttribute("style","border-bottom: 1px solid rgb(160, 103, 252);")
+        xx.setAttribute("id","xx");xx.setAttribute("onclick","xee()")
+        xx.innerHTML="X";
+        h1.innerHTML="Sign Un";
+        p.innerHTML="For Explore Connect";//appending
+        fm.appendChild(d0);
+        d0.appendChild(xx);
+        d0.appendChild(h1);
+        d0.appendChild(p)
+        //============================================================================
+        //section part
+        let s=document.createElement("section")
+        fm.appendChild(s);
+        let d1=document.createElement("div1")//d1=====
+        d1.setAttribute("class","inp")
+        s.appendChild(d1)
+        let i1=document.createElement("input")//i1
+        function sA(l1,q1){i1.setAttribute(l1,q1)} ;//shorthand to setAttr
+        sA("id","i1"); sA("placeholder","First name");sA("type","text");
+        d1.appendChild(i1);
+        //___________________
+        let d2=document.createElement("div2")//d2=====
+        d2.setAttribute("class","inp")
+        s.appendChild(d2)
+        let i2=document.createElement("input")//i2
+        function s2(l,q){i2.setAttribute(l,q)} //shorthand to setAttr
+        s2("id","i2"); s2("placeholder","Last name");s2("type","text")
+        d2.appendChild(i2)
+        //______________________
+        let d3=document.createElement("div3")//d3=====
+        d3.setAttribute("class","inp")
+        s.appendChild(d3)
+        let i3=document.createElement("input")//i3
+        function s3(l,q){i3.setAttribute(l,q)} //shorthand to setAttr
+        s3("id","i3"); s3("placeholder","E-Mail");s3("type","email")
+        d3.appendChild(i3)
+        //_______________________
+        let d4=document.createElement("div4")//d4=====
+        d4.setAttribute("class","inp")
+        s.appendChild(d4)
+        let i4=document.createElement("input")//i4
+        function s4(l,q){i4.setAttribute(l,q)} //shorthand to setAttr
+        s4("id","i4"); s4("placeholder","Password");s4("type","password")
+        d4.appendChild(i4)
+        //________________________
+        let d5=document.createElement("div5")//d5=====
+        d5.setAttribute("class","text")
+        d5.innerHTML="Date Of Birth"
+        s.appendChild(d5)
+        //________________________
+        let d6=document.createElement("div6")//d6
+        d6.setAttribute("class","inp");
+        s.appendChild(d6);
+        let i6=document.createElement("input")//i6
+        function s6(l,q){i6.setAttribute(l,q)} //shorthand to setAttr
+        s6("id","i4"); s6("placeholder","Number");s6("type","date")
+        d6.appendChild(i6)
+        //____________________
+        let d7=document.createElement("div7")
+        d7.setAttribute("class","text")
+        d7.innerHTML="Gender";
+        s.appendChild(d7);
+        //___________________________
+        let d8=document.createElement("div8")
+        d8.setAttribute("class","inp")
+        s.appendChild(d8);
+        //______________________
+        let se=document.createElement("select")
+        se.setAttribute("id","opp")
+        d8.appendChild(se);
+        //option
+        let opt1=document.createElement("option")
+        opt1.setAttribute("value","male")
+        opt1.innerHTML="Male"
+        se.appendChild(opt1);
+        let opt2=document.createElement("option")
+        opt2.setAttribute("value","female")
+        opt2.innerHTML="female"
+        se.appendChild(opt2);
+        let opt3=document.createElement("option")
+        opt3.setAttribute("value","other")
+        opt3.innerHTML="Other"
+        se.appendChild(opt3);
+        //______________====
+        //let x=
+        let sc=document.getElementById("parent").style
+        sc.filter="blur(2px)" ;
+        // .setAttribute("style","filter:blur(2px) ;background-color: transparent;background-image:linear-gradient(135deg,#2d08e8 0% ,#b806c5 100%);background-repeat: no-repeat;height: 95vh;")
+        // document.getElementById("form").setAttribute("style","position:relative;z-index: 1000;")
+        // #appa{
+        //     filter: blur(4px);
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        //fapar to make unclick sign in button after that clicked
+        // let fpp=document.getElementById("fpar")
+        // function fp(l,p){fpp.setAttribute(l,p);};
+        // fp("style","width:100%;line-height:100%;background-color:trasparent;border:1px solid white;")
+        // fpp.width="100%";fpp.height="100%";fpp.background="transparent"
+        i++;
+
+        
+        }}
+        function xee(){
+            if(i==1){
+            let ree=document.getElementById("form")
+            let asd=document.getElementById("parent")
+            ree.removeChild(ree.lastChild)
+            asd.removeAttribute("style")
+            let fpp1=document.getElementById("fpar")
+            fpp1.removeAttribute("style")
+
+            i--;}
+        }
+        let a1=document.createElement("div");
+        let s23=document.getElementById("parent")
+        s23.appendChild(a1);
+        a1.setAttribute("class","parent ah")
+        a1.innerHTML="";
+function aa(){let d=0;let a=0;
+    for(x=0;x<=1;x++){//this loop creates hom1,hom2
+        d ="hom"+"a"+x;
+        console.log(d);
+        d=document.createElement("div");
+        d.setAttribute("class","home "+"a"+x);
+        d.innerHTML="";
+        a1.appendChild(d);
+        if(x==0){ let aR;//for hom1-- creates h1 and p 
+           for(a=0;a<=1;a++){aR=["h1","p"];
+           d.setAttribute("style","display:inline-block;padding-right: 50px;")
+                t="text"+a;
+                t=document.createElement(aR[a]);
+                d.appendChild(t)
+                t.setAttribute("class","text"+a);
+                (a==0)?t.innerHTML="connect":
+                t.innerHTML="it helps you to connect with people"+"<br>"+ "and share with people."+"<br>"+"create account for"
+        }}
+        else if(x==1){//for hom2--login--lform(form)--
+            let login=document.createElement("div");
+            login.setAttribute("class","login");
+            d.appendChild(login);
+            login.setAttribute("style","background-color: #06060698;color: #00fd2e;margin-top:55px;margin-right: 130px;width: 100%;padding: 10px;box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), 0 8px 16px rgba(255, 255, 255, 0.1);border-radius: 8px;");
+            let lform=document.createElement("form");
+            login.setAttribute("class","lform");
+            login.appendChild(lform);
+            lform.setAttribute("style","display: flex;flex-flow: column;")
+            for(o=1;o<=5;o++){//for lform --creates five div c_name=div1-5
+                let g;
+                g="div"+o;
+                // console.log(g);
+                g=document.createElement("div");
+                // console.log(g);
+                lform.appendChild(g);
+                g.setAttribute("class","div "+"a"+o);
+                (o==3)?g.setAttribute("style","border-bottom: 1px solid #555"):null;
+                    for(m=o;m==o;m++){//for each div inserts each element in array by order
+                        az=["","input","input","input","a","button"]
+                        let inp="input"+m;
+                        inp=document.createElement(az[m]);
+                        inp.setAttribute("class","input "+"f"+m);
+                        g.appendChild(inp);
+                        let cr =[{},{"type":"text","placeholder":"Name"},
+                        {"type":"password","placeholder":"password"},
+                        {"type":"button","Value":"Log In"},
+                        {"href":"#","style":"text-decoration: none; color: red;",null:"forgot password"},
+                        {"onclick":"",null:"New Account"}]
+                        let obj;obj=cr[o];//it will get one object from array cr in the order of "o"
+                        for(let t1 in obj){//it will set a attribute for each element in array cr
+                            inp.setAttribute(t1,obj[t1]);
+                            if(obj[t1]=="forgot password"||obj[t1]=="New Account"){
+                                inp.innerHTML=obj[t1];}}
+                            } }}}} 
+       
+        
+    </script>
+</body>
+</html>

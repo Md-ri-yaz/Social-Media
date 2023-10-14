@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ff0000;
+}
+/*================================ navber */
+nav{
+    height: 8vh;
+    background: #fff;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+.search{
+    background-color: #ddd;
+    height:35px;
+    width: 35%;
+    margin-left: 25%;
+    border-radius: 50px;
+    padding: 6px 0 0 6px
+}
+.search i{margin-left: 6px;}
+.search input{
+    padding: 0 0 0 10px;
+    height: 35%;
+    width: max-content;
+    border: none;
+    background-color: #ddd;}
+.cre-btn{
+    background-color:rgb(39, 2, 85);
+    color: #fff;
+    margin-left: 15%;
+    border: none;
+    height: 35px;
+    width: 90px;
+    border-radius: 50px;
+}
+nav img{
+    height: 40px;
+    margin-left: 5%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+/* ================================== */
+
+/*========================== sec common to all section */
+.sec{
+    height: 92vh;
+    background-color: #ddd;
+}
+/* left profile section  1*/
+.sec1{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    padding: 10px;
+}
+/* middle snippets home section 2*/
+.sec2{
+    padding: 10px 0 0 ;
+    /* margin: 0 0 0 auto; */
+    width: 50vw;
+    overflow-y: scroll;
+}
+.sec2::-webkit-scrollbar{display: none;}
+/* right message and friend request section  */
+.sec3{
+    /* margin-left: auto; */
+    width: 25vw;
+}
+/* ============================sec1< .sub .sub$*9 */
+.sub{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* width: 100%; */
+    
+    height: 50px;
+    text-align: justify;
+    background-color: #fff;
+    /* border-radius: 4px; */
+    border-left: 8px solid transparent;
+    transition: all 100ms linear;
+}
+@media only screen and (max-width:950px) {
+    .sec1{
+        width:45px;
+        padding: 0;
+    }
+    .sec2{
+        width: -webkit-calc(70% - 40px);
+    }
+    .sec3{
+        width:-webkit-calc(33% - 40px)
+    }
+    .sub span,.sub1,.sub-btn{
+        display: none;
+    }
+    .sub{
+        width: 40px;
+    }
+}
+@media only screen and (max-width:750px) {
+    .sec3{
+        display: none;
+    }
+    .sec2{
+        width: -webkit-calc(100% - 45px);
+    }
+    nav .search{display: none;}
+}
+.sub i{padding: 5px 15px 0 5px;}
+.sub:hover{
+    border-left: 8px solid rgb(39, 2, 85);
+    color: rgb(39, 2, 85);
+    border-radius: 0px 0 0 0;
+    background-color: transparent;
+    transition: all 10ms linear;
+}
+/* .sub span{ display: none;} */
+.sub2{
+    border-radius: 5px 5px 0 0;
+}
+.sub8{
+    border-radius: 0 0 5px 5px;
+}
+
+/* ========================================== profile*/
+.sub1{
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.sub1 img{
+    margin-right: 20px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 30px;
+    border-radius: 50%;
+}
+.sub1 span{
+    /* width: 100%; */
+    background-color: rgba(255, 255, 0, 0);
+    padding: 5px 0 ;
+   
+}
+.sub1 span h1{
+    font-weight: 900;
+}
+/* ============================================ */
+/* =========================create post btn */
+.sub-btn{
+    position: relative;
+    width: 100%;
+    height: 8%;
+    border: none;
+    background-color: rgb(39, 2, 85);
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 10px;
+    transition: all 50ms linear;
+}
+.sub-btn:active{
+    box-shadow: 1px 1px 9px 1px rgb(39, 2, 85);
+}
+/* ================================================= */
+.post{
+    background-color: #fff;
+    margin-bottom: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.post-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border-radius: 12px; */
+    padding: 15px;background-color: #eee;
+}
+.post-head img{
+    height: 40px;aspect-ratio: 1/1;
+    border-radius: 50%;
+}.post-head span{margin-left: 20px;}
+.posted-pic{padding: 10px 15px 0;}
+.posted-pic img{width: 100%;aspect-ratio: 16/9;object-fit: cover;border-radius: 10px;}
+.post-icons{padding: 0 10px 10px 15px;}
+.post-icons i{margin-right: 5px;transition: all 0.5s linear;}
+.text-under{padding: 0 15px;}
+/* ========================section 3 */
+.sec3{padding: 10px  20px 0 10px;overflow-y: scroll;}
+.sec3::-webkit-scrollbar{display: none;}
+/* message== */
+.message{background-color: #fff;
+    padding: 20px 13px 10px;
+    border-radius: 9px;
+    
+}
+.head-message {
+    display: flex;flex-direction: row;
+    align-items: center;
+}
+.head-message h4{font-weight:470;}
+.head-message i{margin: 0 0 0 auto;}
+.search-message{
+    margin-top: 20px;display: flex;align-items: center;
+    justify-content: center;height: 30px;
+    background-color: #eee;border-radius: 10px;
+}
+.search-message input{border: none;width: 80%;
+    padding-left: 20px;background-color: #eee;}
+    .muser{
+        display: flex;align-items: center;
+    flex-direction: row;padding: 15px;
+    }
+    .muser img{
+        height: 35px;aspect-ratio: 1/1;
+        border-radius: 50%;
+    }
+.muser span{margin-left: 20px;font-weight: bolder;}
+.muser span p{font-weight: 100;}
+.muser:hover{background-color: #eee;}
+/* requset */
+.request{
+    margin-bottom: 20px;}
+.head-request{
+    margin-bottom: 20px;
+    display: flex;flex-direction: row;
+    align-items: center;
+}
+.head-request h4{font-weight: 900;color: #555;}
+.head-request i{margin-left: auto;}
+.requestp{
+    background-color: #fff;
+    display: flex;align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.requestp img{
+    height: 35px;aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.requestp span{
+    width:100px;margin-left: 15px;
+}
+.requestp .ac-dc button{
+    /* margin: 8px 20px 0; */
+    width: 8ch;
+    height: 30px;border-radius: 8px;
+    border: none;
+}
+.request .ac-dc{margin: 8px 0;}
+.requestp .ac-dc .accept{
+    background-color: rgb(34, 135, 34);
+    margin-right: 10px;
+    color: #fff;
+}
+.requestp .ac-dc .decline{
+    background-color: rgb(102, 10, 32);
+    margin-left: 10px;
+    color: #fff;
+}
+/* ================================= */

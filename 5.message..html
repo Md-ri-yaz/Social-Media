@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- <link rel="stylesheet" href="sm.css"> -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <!-- <script src="./js/jquery-3.7.1.js"></script>
+        <script src="./js/bootstrap.js"></script> -->
+    <style>
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        .flex{
+            display: flex;align-items: center;
+            flex-direction: row;
+        }
+        
+        img{
+            height:50px;
+            aspect-ratio: 1/1;
+            background-color: #000;
+            border-radius:  5px 25%  ;
+            margin:  0 10px;
+            box-shadow: 1px 1px 5px 1px #555;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            height: auto;width: auto;
+        }
+        .left{
+            height: 100vh;
+            width: 420px;
+            background-color: #fff;
+            overflow-y: scroll;
+        }
+        .left::-webkit-scrollbar{display: none;}
+        .right{
+            height: 100vh;
+            width: -webkit-calc( 100vw - 420px );
+            background-color: #00f;
+        }
+        /*nav inside left ==========================*/
+        .nav{
+            height: 80px;
+            background-color: #62a;
+            color: #fff;
+            position: sticky;top: 0;
+        }
+        #back{
+            padding: 0 10px;
+        }
+        .contact{
+            height: 70px;
+            display: flex;
+            align-items: center;flex-direction: row;
+            border-bottom: 1px solid #333;
+        }
+
+        /*================================*/
+        .message{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 80px;
+        }
+        .message-box{
+            height: -webkit-calc( 100vh - 130px );
+            background-image: linear-gradient(to top,#ccc,#fff);
+            overflow-y: scroll;
+        }
+        footer{
+            height: 50px;
+            background-color: #fff;
+            justify-content: center;
+        }
+        input:focus{outline: 0;}
+        footer input{
+            border: none;
+            background: #ddd;
+            /*color: aliceblue;*/
+            height: 30px;
+            width: 60%;
+            border-radius: 20px;
+            padding-left: 10px;
+        }
+        footer i{
+            margin: 0 0 0 8px;
+            /*color: aliceblue;*/
+        }
+        .message-box{
+            display: flex;
+            flex-direction: column;
+            align-items:start; justify-content:end;
+            padding: 0 2px 0px 0;
+            height: -webkit-calc(100vh - 130px);
+            overflow-y: scroll;
+        }
+        .message-box::-webkit-scrollbar{display: none;}
+        .text-box{
+            padding: 5px 7px;
+            background-color: #fff;
+            margin: 0px 0 10px 5px;
+            max-width:50%;
+            /* max-height:10ch; */
+            min-width: 4ch;
+            min-height: max-content;
+            border-radius: 6px;
+            text-align: justify;
+            word-wrap: break-word;
+        }
+        span h3{font-size: 25px; font-weight:600;}
+        span p{font-size: 18px; font-weight: 300;}
+        
+        .active{
+            background-color: #a2d;
+        }
+        /*========================================*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="nav flex">
+                <i id="back" class="fa-solid fa-search fa-xl"></i>
+                <span>
+                    <h3>heading</h3><p>some text content</p>
+                </span>
+            </div>
+            <div class="contacts">
+                <div class="contact">
+                    <img src="img/elephant.jfif" alt=""><span><h3>arun</h3><p>!!!!</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/girl.jfif" alt=""><span><h3>heading</h3><p>hii</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/minecraft1.jfif" alt=""><span><h3>minecraft</h3><p>creeper</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/a1.jfif" alt=""><span><h3>heading</h3><p>some text content</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/girl.jfif" alt=""><span><h3>heading</h3><p>some text content</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/girl.jfif" alt=""><span><h3>heading</h3><p>some text content</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/minecraft1.jfif" alt=""><span><h3>heading</h3><p>some text content</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/a3.jfif" alt=""><span><h3>heading</h3><p>some text content</p></span>
+                </div>
+                <div class="contact" onclick="">
+                    <img src="img/a2.jpg" alt=""><span><h3>mohideen</h3><p>eppa?</p></span>
+                </div>
+                <div class="contact">
+                    <img src="img/minecraft star.jfif" alt=""><span><h3>ranjith</h3><p>?</p></span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="message ">
+                <header class="flex" id="header" style="background-color: #0a9;"><img src="img/girl.jfif" alt=""><span><h3>heading</h3><marquee behavior="" direction=""><p>some text content</p></marquee></span></header>
+                <!-- =============================== -->
+                <div class="message-box" id="message-box#">
+                    <div class="text-box t1">bye</div>
+                    <div class="text-box">see you</div>
+                    <div class="text-box">hi</div>
+                </div>
+                <!-- ===============================-->
+                <footer class="flex"> <input type="text" id="mese" placeholder="Enter Text"><i onclick="tx()" id="pbtn" class="fa-solid fa-play fa-xl"></i></footer>
+            </div>
+        </div>
+    </div>
+    <script>
+        let tag=document.getElementById("message-box#");
+        let i=0;
+        const tx=()=>{
+            let mese=document.getElementById("mese").value
+            let mes=document.getElementById("mese")
+            i++;
+            console.log(i)
+            let dtag="dtag"+i;
+        dtag=document.createElement("div")
+        tag.appendChild(dtag)
+        dtag.setAttribute("class","text-box")
+        if(mese==null){
+            dtag.style.width="100px"
+            dtag.style.height="50px"
+        }
+        else{
+        dtag.innerHTML=mese;
+        mes.value=null;
+    }
+    }
+    const even=document.getElementById("mese")
+    even.addEventListener("keypress",(event)=>{
+    if(event.key==="Enter"){
+        event.preventDefault();
+        document.getElementById("pbtn").click()
+    }
+    })
+    const con=document.getElementsByClassName("contact");
+    console.log(con)
+    for(let i of con){
+        i.addEventListener("click",()=>{
+            var exi=document.getElementsByClassName("active");
+            let right=document.getElementsByTagName("header");
+            (exi.length>0)?exi[0].className=exi[0].className.replace("active",""):console.log(null);
+            i.classList+=" active"
+            let exe=right[0].firstChild
+            exe.setAttribute("src",i.firstElementChild.src)
+            let exe1=i.firstElementChild.src
+        })}
+            //212let ini=con[i];
+            //213let act=i.className;
+            //216console.log(right.firstChild)
+        //218exi[0].className="contact":
+            //219this.con[i]=con[i];
+            //220(act==="contact")?i.classList.add("active"):i.className.replace("contact","contact active");
+        //let right=document.getElementsByTagName("header")
+        //console.log(right[0].firstChild.src=)
+    </script>
+</body>
+</html>

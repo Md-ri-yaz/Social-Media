@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <style>
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+            
+        .pic{
+            background: #ddd;
+        }
+        .cover img{
+            width: 100%;
+            height: -webkit-calc(40vh - 20px);
+            filter: blur(10px);
+            object-fit: cover;
+        }
+        .head{
+            position: relative;
+            bottom: 65px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;flex-direction: row;
+            border-bottom: 2px solid #eee;
+            background-color: #ffffff77;
+            margin: 0 20px;
+            min-height: 130px;
+            border-radius: 10px;
+        }
+        .head span{margin: auto 0 30px 70px}
+        
+        .head span p{margin-top: 10px;}
+        .icons{margin:0 20px 0 auto ;}
+        
+        @media only screen and (max-width:340px){
+            .head{
+                flex-direction: column;
+                justify-content: center;
+            }
+            .head span{
+                margin: 0 0 0 0;
+            }
+            .icons{
+                margin: 8px 0;
+            }
+        }  
+        .img{
+            margin: 0 0 0 2%;
+            width: 100px;height: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 10% ;
+        }
+        .about{
+            background-color: #fff;
+            margin: 0 10px;
+            border-radius: 15px 10px;
+            padding: 9px 10px;
+            text-align: justify;
+            border-width: 0 0 0 2px;
+        }
+        .about:hover{
+            border: 2px solid #f29;
+            border-width: 0 0 2px 0;
+            font-style: oblique;
+        }
+        main{
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        .section1{
+            margin:0 0 0 10px;
+            width: -webkit-calc(15vw);
+            
+
+        }
+        .section3{
+            margin:0 10px 0 0;
+            width: -webkit-calc(25vw - 50px);
+        }
+        .section2{
+            width: -webkit-calc(60vw - 20px);
+            height: 400px;
+            overflow-y: scroll;
+            
+        }
+        .section1,.section2,.section3{
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        @media only screen and (max-width:768px){
+            .section1{display: none;}
+            .section2{
+                width: -webkit-calc(70vw - 20px);
+                margin: 0 0 0 10px;
+            }
+            .section3{
+                width: -webkit-calc(30vw - 20px);
+            }
+        }
+        @media only screen and (max-width:425px){
+            .section2{
+                width: -webkit-calc(100vw - 10px);
+                margin: 0 5px;
+            }
+            .section3{
+                display: none;
+            }
+        }
+        .sub{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* width: 100%; */
+            
+            height: 50px;
+            text-align: justify;
+            background-color: #fff;
+            /* border-radius: 4px; */
+            border-left: 8px solid transparent;
+            transition: all 100ms linear;
+        }
+        .sub i{padding: 5px 15px 0 5px;}
+.sub:hover{
+    border-left: 8px solid rgb(39, 2, 85);
+    color: rgb(39, 2, 85);
+    background-color: #ddd;
+    transition: all 10ms linear;
+}
+/*+++++++post*/
+.post{
+    background-color: #fff;
+    margin-bottom: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.post-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border-radius: 12px; */
+    padding: 15px;
+}
+.post-head img{
+    height: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}.post-head span{margin-left: 20px;}
+.posted-pic{padding: 10px 15px 0;}
+.posted-pic img{width: 100%;aspect-ratio: 16/9;object-fit: cover;border-radius: 10px;}
+.post-icons{padding: 0 10px 10px 15px;}
+.post-icons i{margin-right: 5px;transition: all 0.5s linear;}
+.text-under{padding: 0 15px;}
+/*friends*/
+.request{
+    padding: 7px 5px 5px 7px;}
+.head-request{
+    margin-bottom: 20px;
+    display: flex;flex-direction: row;
+    align-items: center;
+}
+.head-request h4{
+    font-weight: 900;
+    color: #555;
+    height: 30px;
+    margin: 0 0 0 5px;
+    padding: 10px 0 0 0;
+}
+.requestp{
+    background-color: #fff;
+    display: flex;align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.requestp img{
+    height: 65px;aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.requestp span{
+    width:100px;margin-left: 15px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <div class="cover">
+            <img src="img/minecraft1.jfif" alt="">
+        </div>
+        <div class="head"><img class="img" src="img/minecraft1.jfif" alt="">
+            <span><h2>riyazudeen</h2><p>Fullstack Developer</p>
+            </span>
+            <div class="icons">
+                <i class="fa-brands fa-instagram fa-xl"></i>
+            <i class="fa-brands fa-square-facebook fa-xl"></i>    
+            <i class="fa-brands fa-square-x-twitter fa-xl"></i>
+            </div>    
+        </div>
+            <div class="about">
+                <h3>about me</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione mollitia accusamus natus nisi beatae rerum error, iusto accusantium tenetur, cum animi, molestiae suscipit ab aut alias? Mollitia eaque dolorum voluptates?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate praesentium, explicabo aliquam nam quasi ea quae alias, fugiat numquam, a id vel. In recusandae iusto repudiandae odio sed, modi neque.
+                </p>
+            </div>
+            <main>
+                <section class="section1">
+                    <sub class="sub sub2 darkmode-element" onclick="clik()"><i class="fa-solid fa-house fa-xl"></i><span><h3>Home</h3></span></sub>
+            <sub class="sub sub3 darkmode-element"><i class="fa-solid fa-compass fa-xl"></i><span><h3>Explore</h3></span></sub>
+            <sub class="sub sub3 darkmode-element"><i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i><span><h3>Log Out</h3></span></sub>
+                </section>
+                <section class="section2">
+                    <div class="post p-2 darkmode-element">
+                        <main class="post-head darkmode">
+                            <img src="img/a1.jfif" alt=""><span><h3>Arun Kumar</h3><p>posted</p></span>
+                        </main>
+                        <div class="posted-pic"><img src="img/elephant.jfif" alt=""></div>
+                        <div class="post-icons"><i id="like"class="fa-regular fa-heart fa-fade fa-xl"></i>
+                            <i class="fa-solid fa-comment fa-xl"></i>
+                            <i class="fa-solid fa-share fa-xl"></i></div>
+                            <div class="text-under">
+                                liked by nameand likes of 2000
+                            </div>
+                            <div class="post p-2 darkmode-element">
+                                <main class="post-head darkmode">
+                                    <img src="img/a1.jfif" alt=""><span><h3>Arun Kumar</h3><p>posted</p></span>
+                                </main>
+                                <div class="posted-pic"><img src="img/elephant.jfif" alt=""></div>
+                                <div class="post-icons"><i id="like"class="fa-regular fa-heart fa-fade fa-xl"></i>
+                                    <i class="fa-solid fa-comment fa-xl"></i>
+                                    <i class="fa-solid fa-share fa-xl"></i></div>
+                                    <div class="text-under">
+                                        liked by nameand likes of 2000
+                                    </div>
+                </section>
+                <section class="section3">
+                    <div class="request">
+                        <div class="head-request"><i class="fa-solid fa-user-group fa-xl"></i><h4>Friends</h4></div>
+                            <div class="requestp r1 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span></div>
+                            <div class="requestp r2 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span></div>
+                            <div class="requestp r3 darkmode-element"><img src="img/girl.jfif" alt=""><span><h4>name</h4><p>content</p></span></div>
+                        </div>
+                </section>
+            </main>
+    </div>
+    <script>
+        const clik=()=>{
+            window.location.href="4.social media ui.html"
+        }
+    </script>
+</body>
+</html>
